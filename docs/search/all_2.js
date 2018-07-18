@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../group__startup.html#gae66f6b31b5ad750f1fe042a706a4e3d4',1,'BCX.cpp']]]
+  ['halt',['HALT',['../group__cmd.html#ga5b49f43507869e85f0cd17ad7b2d4f2a',1,'HALT(void):&#160;BCX.cpp'],['../group__cmd.html#ga5b49f43507869e85f0cd17ad7b2d4f2a',1,'HALT(void):&#160;BCX.cpp']]]
 ];

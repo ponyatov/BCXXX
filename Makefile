@@ -2,9 +2,9 @@
 all: doxy empty.log 
 
 empty.log: empty.src ./BCX.exe
-	./BCX.exe < ./BCX.exe > $@ && tail $(TAIL) $@
+	./BCX.exe < $< > $@ && tail $(TAIL) $@
 	
-C = BCX.cpp ypp.tab.cpp lex.yy.c
+C = BCX.cpp ypp.tab.cpp lexer.cpp
 H = BCX.hpp ypp.tab.hpp
 
 #CXXFLAGS += -std=gnu++11
@@ -14,7 +14,7 @@ H = BCX.hpp ypp.tab.hpp
 ypp.tab.cpp: syntax.yacc
 	bison -o $@ $<
 
-lex.yy.c: lexer.lex
+lexer.cpp: lexer.lex
 	flex -o $@ $<
 
 .PHONY: doxy

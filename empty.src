@@ -1,4 +1,6 @@
 # minimal source code /BCX assembler/
 
-	nop
-	halt
+	nop		# do nothing
+	halt	# stop system
+
+.go			# and run compiled bytecode in place

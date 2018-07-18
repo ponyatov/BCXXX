@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['syntax_20parser_20interface',['Syntax parser interface',['../group__parser.html',1,'']]],
-  ['system_20startup',['System startup',['../group__startup.html',1,'']]]
+  ['commands',['commands',['../group__cmd.html',1,'']]],
+  ['compiler',['Compiler',['../group__compiler.html',1,'']]]
 ];

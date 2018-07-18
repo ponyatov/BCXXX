@@ -59,6 +59,10 @@ $(function() {
 
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">BCX.hpp File Reference</div>  </div>
 </div><!--header-->
@@ -88,6 +92,18 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:gad197097190188a1227ecf9ae73cc79fb"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__vm.html#gad197097190188a1227ecf9ae73cc79fb">Msz</a>&#160;&#160;&#160;0x1000</td></tr>
+<tr class="memdesc:gad197097190188a1227ecf9ae73cc79fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">program/data memory size <br /></td></tr>
+<tr class="separator:gad197097190188a1227ecf9ae73cc79fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga470b039eb8cfe27a1810bb01c2f4ac30"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__op.html#ga470b039eb8cfe27a1810bb01c2f4ac30">OP_NOP</a>&#160;&#160;&#160;0x00</td></tr>
+<tr class="memdesc:ga470b039eb8cfe27a1810bb01c2f4ac30"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__cmd.html#ga9d9f3446653e398af0583979cee23c70">NOP</a> <br /></td></tr>
+<tr class="separator:ga470b039eb8cfe27a1810bb01c2f4ac30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga266bf470673fd855dc733044dc884dad"><td class="memItemLeft" align="right" valign="top">
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__op.html#ga266bf470673fd855dc733044dc884dad">OP_HALT</a>&#160;&#160;&#160;0xFF</td></tr>
+<tr class="memdesc:ga266bf470673fd855dc733044dc884dad"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="group__cmd.html#ga5b49f43507869e85f0cd17ad7b2d4f2a">HALT</a> <br /></td></tr>
+<tr class="separator:ga266bf470673fd855dc733044dc884dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">token macro</div></td></tr>
 <tr class="memitem:ga3388149d46494096258bcd52cb3e3648"><td class="memItemLeft" align="right" valign="top">
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__parser.html#ga3388149d46494096258bcd52cb3e3648">C0</a>(X)&#160;&#160;&#160;{ yylval.cmd0 = X; return CMD0; }</td></tr>
@@ -96,6 +112,18 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:gaa7077f289e1c149d763b086957b1997f"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__vm.html#gaa7077f289e1c149d763b086957b1997f">VM</a> (void)</td></tr>
+<tr class="memdesc:gaa7077f289e1c149d763b086957b1997f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual Machine loop (bytecode interpreter) <br /></td></tr>
+<tr class="separator:gaa7077f289e1c149d763b086957b1997f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d9f3446653e398af0583979cee23c70"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmd.html#ga9d9f3446653e398af0583979cee23c70">NOP</a> (void)</td></tr>
+<tr class="memdesc:ga9d9f3446653e398af0583979cee23c70"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>NOP</code> : NO Operation , do nothing <br /></td></tr>
+<tr class="separator:ga9d9f3446653e398af0583979cee23c70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b49f43507869e85f0cd17ad7b2d4f2a"><td class="memItemLeft" align="right" valign="top">
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmd.html#ga5b49f43507869e85f0cd17ad7b2d4f2a">HALT</a> (void)</td></tr>
+<tr class="memdesc:ga5b49f43507869e85f0cd17ad7b2d4f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>HALT</code> : stop the system <br /></td></tr>
+<tr class="separator:ga5b49f43507869e85f0cd17ad7b2d4f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">parser interface [yacc/bison]</div></td></tr>
 <tr class="memitem:gacd8617a8f2ac0de8bc1cc032cf449e19"><td class="memItemLeft" align="right" valign="top">
 int&#160;</td><td class="memItemRight" valign="bottom"><b>yyparse</b> ()</td></tr>
@@ -104,6 +132,25 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>yyparse</b> ()</td></t
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__parser.html#ga336804033724b76432b332e95008e90a">yyerror</a> (const char *)</td></tr>
 <tr class="memdesc:ga336804033724b76432b332e95008e90a"><td class="mdescLeft">&#160;</td><td class="mdescRight">syntax error callback <br /></td></tr>
 <tr class="separator:ga336804033724b76432b332e95008e90a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:gad8e76a4834c5fdcf094d5478cb239bf7"><td class="memItemLeft" align="right" valign="top">
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__vm.html#gad8e76a4834c5fdcf094d5478cb239bf7">M</a> [<a class="el" href="group__vm.html#gad197097190188a1227ecf9ae73cc79fb">Msz</a>]</td></tr>
+<tr class="memdesc:gad8e76a4834c5fdcf094d5478cb239bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">flat memory for program &amp; data <br /></td></tr>
+<tr class="separator:gad8e76a4834c5fdcf094d5478cb239bf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8a8692bd83f483740fcc4bc7ca397618"><td class="memItemLeft" align="right" valign="top">
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__vm.html#ga8a8692bd83f483740fcc4bc7ca397618">Ip</a></td></tr>
+<tr class="memdesc:ga8a8692bd83f483740fcc4bc7ca397618"><td class="mdescLeft">&#160;</td><td class="mdescRight">instruction pointer <br /></td></tr>
+<tr class="separator:ga8a8692bd83f483740fcc4bc7ca397618"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3fe410a28ee11b520d9dd574d2139f4b"><td class="memItemLeft" align="right" valign="top">
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__vm.html#ga3fe410a28ee11b520d9dd574d2139f4b">op</a></td></tr>
+<tr class="memdesc:ga3fe410a28ee11b520d9dd574d2139f4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">opcode of current command <br /></td></tr>
+<tr class="separator:ga3fe410a28ee11b520d9dd574d2139f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ee403c18197e7dd5a472f5a3def38b0"><td class="memItemLeft" align="right" valign="top">
+uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compiler.html#ga5ee403c18197e7dd5a472f5a3def38b0">Cp</a></td></tr>
+<tr class="memdesc:ga5ee403c18197e7dd5a472f5a3def38b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">compiler pointer <br /></td></tr>
+<tr class="separator:ga5ee403c18197e7dd5a472f5a3def38b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 lexer interface [lex/flex]</h2></td></tr>

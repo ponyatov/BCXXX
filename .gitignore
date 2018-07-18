@@ -5,4 +5,6 @@
 *.log
 ypp.tab.?pp
 lex.yy.c
+parser.?pp
+lexer.cpp
 
