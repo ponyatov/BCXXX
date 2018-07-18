@@ -1,0 +1,4 @@
+# minimal source code /BCX assembler/
+
+	nop
+	halt
