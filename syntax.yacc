@@ -5,8 +5,11 @@
 %defines %union { uint8_t cmd0; }
 
 %token <cmd0> CMD0
-%token go
+%token dirGO
 
 %%
-REPL : | REPL CMD0 { M[Cp++] = $2; } | REPL go { VM(); } ;
+REPL :
+	| REPL CMD0		{ M[Cp++] = $2; }
+	| REPL dirGO	{ VM(); }
+	;
 %%

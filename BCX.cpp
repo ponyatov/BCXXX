@@ -21,11 +21,12 @@ uint32_t Cp =0;
 uint8_t op =0;
 
 void VM() {
-	for (;;) {				// infty loop
-		op = M[Ip++];		// fetch next command opcode
-		switch (op) {
+	for (;;) {								// infty loop
+		op = M[Ip++];						// fetch next command opcode
+		switch (op) {						// decode & execute command
 			case OP_NOP:	NOP();	break;
 			case OP_HALT:	HALT();	break;
+											// error on unknown command opcode
 			default:
 				fprintf(stderr,"\n\n unknown command opcode: %.2X \n\n",op);
 				abort();

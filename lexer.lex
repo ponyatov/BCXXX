@@ -13,7 +13,8 @@
 nop					C0(OP_NOP)
 halt				C0(OP_HALT)
 
-.go					{ VM(); }				// start VM
+.go					{ return dirGO; }		// .go directive: start VM
 
 [ \t\r\n]+			{}						// drop spaces
 .					{ yyerror("lexer"); }	// syntax error on undetected char
+%%
