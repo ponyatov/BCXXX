@@ -1,0 +1,66 @@
+/**
+@page skelex Project file structure
+
+@section run Run script
+
+`BCX.exe` mix both compiler and bytecode interpreter (VM):
+
+@dot
+digraph {
+
+rankdir = LR;
+
+src [label="empty.src"];
+exe [label="BCX.exe"];
+log [label="empty.log"];
+src -> exe [label="compiler"];
+exe -> log [label="compiled bytecode\lexecution log"];
+
+bcx [label="empty.bcx"];
+exe -> bcx [label=".save empty.bcx"];
+
+bcx -> uVM [label="run on\lmicrocontroller"];
+
+{ rank=same; src; exe; }
+
+subgraph cluster_MCU {
+label="AVR8\lCortex-M\lMIPS RT5350"; 
+uVM; }
+
+}
+@enddot
+
+@section Compiling
+
+@dot
+digraph {
+
+rankdir = LR;
+
+exe [label="BCX.exe"];
+cpp [label="BCX.cpp"];
+hpp [label="BCX.hpp"];
+lex [label="lexer.lex"];
+yacc [label="syntax.yacc"];
+lexyc [label="lex.yy.c"];
+tabc [label="ypp.tab.cpp"];
+tabh [label="ypp.tab.hpp"];
+
+hpp -> cpp;
+cpp -> exe [label="virtual machine\linterpreter\lruntime system"];
+yacc -> tabh [label="bison"];
+yacc -> tabc [label="bison"];
+tabc -> exe [label="syntax\lparser"];
+lex -> lexyc [label="flex"];
+lexyc -> exe [label="lexer"];
+hpp -> lexyc;
+hpp -> tabc;
+tabh -> hpp [label="token\ldefinitions"];
+
+{rank=same; yacc; tabh; hpp; lex; }
+
+}
+@enddot
+ 
+
+*/
