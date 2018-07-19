@@ -5,22 +5,43 @@
 #define _H_BCX
 
 #include <iostream>
+#include <map>
+#include <vector>
 using namespace std;
 
 /// @defgroup vm Virtual Machine
 /// @{
 
+/// @defgroup types types
+/// @{
+
+/// address in virtual memory
+typedef uint32_t addr;
+
+/// byte
+typedef uint8_t byte;
+
+/// 32/16-bit VM machine word
+typedef addr cell;
+
+/// @}
+
+/// @defgroup config configuration
+/// @{
+
 /// program/data memory size
 #define Msz 0x1000
 
+/// @}
+
 /// flat memory for program & data
-extern uint8_t M[Msz];
+extern byte M[Msz];
 
 /// instruction pointer
-extern uint32_t Ip;
+extern addr Ip;
 
 /// opcode of current command
-extern uint8_t op;
+extern byte op;
 
 /// Virtual Machine loop (bytecode interpreter)
 extern void VM(void);
@@ -33,7 +54,19 @@ extern void NOP(void);
 /// `HALT` : stop the system
 extern void HALT(void);
 
-/// @defgroup op Opcodes
+/// `JMP` : unconditional jump
+extern void JMP(void);
+/// `?JMP ( false -- )` : conditional jump if FALSE on stack
+extern void qJMP(void);
+/// `CALL` : nested call
+extern void CALL(void);
+/// `RET` : return from nested call
+extern void RET(void);
+
+/// `DUMP` : dump memory
+extern void DUMP(void);
+
+/// @defgroup op opcodes
 /// @{
 
 /// @ref NOP
@@ -41,6 +74,14 @@ extern void HALT(void);
 
 /// @ref HALT
 #define OP_HALT		0xFF
+
+/// @ref JMP
+#define OP_JMP		0x01
+#define OP_qJMP		0x02
+#define OP_CALL		0x03
+#define OP_RET		0x04
+
+#define OP_LIT		0x05
 
 /// @}
 
@@ -54,7 +95,38 @@ extern void HALT(void);
 /// compiler pointer
 extern uint32_t Cp;
 
-/// @defgroup parser Syntax parser interface
+/// get cell from memory
+/// @param[in] addr address in VM memory
+extern cell cellGet(cell addr);
+
+/// compile byte
+/// @param[in] byte to be compiled
+extern void byteCompile(byte);
+
+/// compile cell == VM machine word
+/// @param[in] cell 32- or 16- bit integer
+extern void cellCompile(cell);
+
+/// compile label by its name
+/// @param[in] string label name to be lookup in symbol table
+extern void labelCompile(string*);
+
+/// @defgroup symtable symbol table
+/// @{
+
+/// list of @ref addr esses
+typedef std::vector<addr> addrvector;
+/// known assembly labels
+extern map<string,addr> known;
+/// forward references to unknown labels
+extern map<string,addrvector> undef;
+
+/// @}
+
+/// process label in source code
+extern void label(string *name);
+
+/// @defgroup parser syntax parser interface
 /// @{
 
 /// @name lexer interface [lex/flex]
@@ -74,6 +146,9 @@ extern char* yytext;
 
 /// `CMD0` zero parameters command
 #define C0(X) { yylval.cmd0 = X; return CMD0; }
+
+/// `CMD1` single parameter command
+#define C1(X) { yylval.cmd1 = X; return CMD1; }
 
 /// @}
 

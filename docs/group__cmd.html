@@ -71,7 +71,7 @@ Collaboration diagram for commands:</div>
 <div class="dyncontent">
 <center><table><tr><td><img src="group__cmd.png" border="0" alt="" usemap="#group____cmd"/>
 <map name="group____cmd" id="group____cmd">
-<area shape="rect" id="node1" href="group__op.html" title="Opcodes" alt="" coords="300,5,375,32"/>
+<area shape="rect" id="node1" href="group__op.html" title="opcodes" alt="" coords="300,5,371,32"/>
 <area shape="rect" id="node3" href="group__vm.html" title="Virtual Machine" alt="" coords="5,5,117,32"/>
 </map>
 </td></tr></table></center>
@@ -79,7 +79,7 @@ Collaboration diagram for commands:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
 Modules</h2></td></tr>
-<tr class="memitem:group__op"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__op.html">Opcodes</a></td></tr>
+<tr class="memitem:group__op"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__op.html">opcodes</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -92,6 +92,26 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="grou
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmd.html#ga5b49f43507869e85f0cd17ad7b2d4f2a">HALT</a> (void)</td></tr>
 <tr class="memdesc:ga5b49f43507869e85f0cd17ad7b2d4f2a"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>HALT</code> : stop the system <br /></td></tr>
 <tr class="separator:ga5b49f43507869e85f0cd17ad7b2d4f2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga833477f5c3bc4f230b83e481c58a0684"><td class="memItemLeft" align="right" valign="top"><a id="ga833477f5c3bc4f230b83e481c58a0684"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmd.html#ga833477f5c3bc4f230b83e481c58a0684">JMP</a> (void)</td></tr>
+<tr class="memdesc:ga833477f5c3bc4f230b83e481c58a0684"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>JMP</code> : unconditional jump <br /></td></tr>
+<tr class="separator:ga833477f5c3bc4f230b83e481c58a0684"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1cc2613d807e7e42a861cb4430113f57"><td class="memItemLeft" align="right" valign="top"><a id="ga1cc2613d807e7e42a861cb4430113f57"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmd.html#ga1cc2613d807e7e42a861cb4430113f57">qJMP</a> (void)</td></tr>
+<tr class="memdesc:ga1cc2613d807e7e42a861cb4430113f57"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>?JMP ( false -- )</code> : conditional jump if FALSE on stack <br /></td></tr>
+<tr class="separator:ga1cc2613d807e7e42a861cb4430113f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8d6192ebc013c963903c8b6cd4f838a6"><td class="memItemLeft" align="right" valign="top"><a id="ga8d6192ebc013c963903c8b6cd4f838a6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmd.html#ga8d6192ebc013c963903c8b6cd4f838a6">CALL</a> (void)</td></tr>
+<tr class="memdesc:ga8d6192ebc013c963903c8b6cd4f838a6"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>CALL</code> : nested call <br /></td></tr>
+<tr class="separator:ga8d6192ebc013c963903c8b6cd4f838a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b09d861a2be6db2007fc1a2dd939070"><td class="memItemLeft" align="right" valign="top"><a id="ga5b09d861a2be6db2007fc1a2dd939070"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmd.html#ga5b09d861a2be6db2007fc1a2dd939070">RET</a> (void)</td></tr>
+<tr class="memdesc:ga5b09d861a2be6db2007fc1a2dd939070"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>RET</code> : return from nested call <br /></td></tr>
+<tr class="separator:ga5b09d861a2be6db2007fc1a2dd939070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1b08ad693e4a9383e53d2658ab41c8d"><td class="memItemLeft" align="right" valign="top"><a id="gaf1b08ad693e4a9383e53d2658ab41c8d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cmd.html#gaf1b08ad693e4a9383e53d2658ab41c8d">DUMP</a> (void)</td></tr>
+<tr class="memdesc:gaf1b08ad693e4a9383e53d2658ab41c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>DUMP</code> : dump memory <br /></td></tr>
+<tr class="separator:gaf1b08ad693e4a9383e53d2658ab41c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 </div><!-- contents -->

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ip',['Ip',['../group__vm.html#ga8a8692bd83f483740fcc4bc7ca397618',1,'Ip():&#160;BCX.cpp'],['../group__vm.html#ga8a8692bd83f483740fcc4bc7ca397618',1,'Ip():&#160;BCX.cpp']]]
+  ['dump',['DUMP',['../group__cmd.html#gaf1b08ad693e4a9383e53d2658ab41c8d',1,'DUMP(void):&#160;BCX.cpp'],['../group__cmd.html#gaf1b08ad693e4a9383e53d2658ab41c8d',1,'DUMP(void):&#160;BCX.cpp']]]
 ];

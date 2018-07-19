@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['m',['M',['../group__vm.html#gad8e76a4834c5fdcf094d5478cb239bf7',1,'M():&#160;BCX.cpp'],['../group__vm.html#gad8e76a4834c5fdcf094d5478cb239bf7',1,'M():&#160;BCX.cpp']]]
+  ['known',['known',['../group__symtable.html#gaa94e69a428386f46c7efe978b79cd187',1,'known():&#160;BCX.cpp'],['../group__symtable.html#gaa94e69a428386f46c7efe978b79cd187',1,'known():&#160;BCX.cpp']]]
 ];

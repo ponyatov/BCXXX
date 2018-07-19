@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BCX: Syntax parser interface</title>
+<title>BCX: syntax parser interface</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -60,11 +60,11 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Syntax parser interface<div class="ingroups"><a class="el" href="group__compiler.html">Compiler</a></div></div>  </div>
+<div class="title">syntax parser interface<div class="ingroups"><a class="el" href="group__compiler.html">Compiler</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="dynheader">
-Collaboration diagram for Syntax parser interface:</div>
+Collaboration diagram for syntax parser interface:</div>
 <div class="dyncontent">
 <center><table><tr><td><img src="group__parser.png" border="0" alt="" usemap="#group____parser"/>
 <map name="group____parser" id="group____parser">
@@ -93,6 +93,10 @@ token macro</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__parser.html#ga3388149d46494096258bcd52cb3e3648">C0</a>(X)&#160;&#160;&#160;{ yylval.cmd0 = X; return CMD0; }</td></tr>
 <tr class="memdesc:ga3388149d46494096258bcd52cb3e3648"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>CMD0</code> zero parameters command <br /></td></tr>
 <tr class="separator:ga3388149d46494096258bcd52cb3e3648"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5edefb341af3cf6daaf77becf6772b3d"><td class="memItemLeft" align="right" valign="top"><a id="ga5edefb341af3cf6daaf77becf6772b3d"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__parser.html#ga5edefb341af3cf6daaf77becf6772b3d">C1</a>(X)&#160;&#160;&#160;{ yylval.cmd1 = X; return CMD1; }</td></tr>
+<tr class="memdesc:ga5edefb341af3cf6daaf77becf6772b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>CMD1</code> single parameter command <br /></td></tr>
+<tr class="separator:ga5edefb341af3cf6daaf77becf6772b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
 parser interface [yacc/bison]</h2></td></tr>

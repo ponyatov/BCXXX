@@ -1,3 +1,5 @@
 <map id="Virtual Machine" name="Virtual Machine">
-<area shape="rect" id="node1" href="$group__cmd.html" title="commands" alt="" coords="165,5,252,32"/>
+<area shape="rect" id="node1" href="$group__types.html" title="types" alt="" coords="186,5,241,32"/>
+<area shape="rect" id="node2" href="$group__config.html" title="configuration" alt="" coords="165,56,261,83"/>
+<area shape="rect" id="node3" href="$group__cmd.html" title="commands" alt="" coords="170,107,257,133"/>
 </map>

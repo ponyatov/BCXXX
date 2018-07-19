@@ -1,0 +1,11 @@
+# label/jump test
+
+			nop
+entry:		nop
+backward:	jmp forward
+			nop
+			jmp	backward
+forward:	halt
+			# jmp undef		# uncomment to check unresolved error
+
+.go

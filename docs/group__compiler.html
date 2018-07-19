@@ -61,6 +61,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#groups">Modules</a> &#124;
+<a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Compiler</div>  </div>
@@ -71,15 +72,33 @@ Collaboration diagram for Compiler:</div>
 <div class="dyncontent">
 <center><table><tr><td><img src="group__compiler.png" border="0" alt="" usemap="#group____compiler"/>
 <map name="group____compiler" id="group____compiler">
-<area shape="rect" id="node2" href="group__parser.html" title="Syntax parser interface" alt="" coords="128,5,285,32"/>
+<area shape="rect" id="node1" href="group__symtable.html" title="symbol table" alt="" coords="157,5,253,32"/>
+<area shape="rect" id="node3" href="group__parser.html" title="syntax parser interface" alt="" coords="128,56,283,83"/>
 </map>
 </td></tr></table></center>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
 Modules</h2></td></tr>
-<tr class="memitem:group__parser"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__parser.html">Syntax parser interface</a></td></tr>
+<tr class="memitem:group__symtable"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__symtable.html">symbol table</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__parser"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__parser.html">syntax parser interface</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ga215113c9a7d256e60db51cf5ca34b759"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__types.html#ga5f415cf27f127e2644eec9d113d44f08">cell</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compiler.html#ga215113c9a7d256e60db51cf5ca34b759">cellGet</a> (<a class="el" href="group__types.html#ga5f415cf27f127e2644eec9d113d44f08">cell</a> <a class="el" href="group__types.html#ga13a4d0a8bea384a6b1a00ebcce634caa">addr</a>)</td></tr>
+<tr class="separator:ga215113c9a7d256e60db51cf5ca34b759"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8230dd7e0453e461cf8efb744373e4c9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compiler.html#ga8230dd7e0453e461cf8efb744373e4c9">byteCompile</a> (<a class="el" href="group__types.html#gab8ef12fab634c171394422d0ee8baf94">byte</a>)</td></tr>
+<tr class="separator:ga8230dd7e0453e461cf8efb744373e4c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3755bcd7472a212bb83edf00873e5bcc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compiler.html#ga3755bcd7472a212bb83edf00873e5bcc">cellCompile</a> (<a class="el" href="group__types.html#ga5f415cf27f127e2644eec9d113d44f08">cell</a>)</td></tr>
+<tr class="separator:ga3755bcd7472a212bb83edf00873e5bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff85c00da2222f402e18d2ee8070ee43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compiler.html#gaff85c00da2222f402e18d2ee8070ee43">labelCompile</a> (string *)</td></tr>
+<tr class="separator:gaff85c00da2222f402e18d2ee8070ee43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9275fbc387d79bea40b4d855a744643"><td class="memItemLeft" align="right" valign="top"><a id="gaf9275fbc387d79bea40b4d855a744643"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compiler.html#gaf9275fbc387d79bea40b4d855a744643">label</a> (string *name)</td></tr>
+<tr class="memdesc:gaf9275fbc387d79bea40b4d855a744643"><td class="mdescLeft">&#160;</td><td class="mdescRight">process label in source code <br /></td></tr>
+<tr class="separator:gaf9275fbc387d79bea40b4d855a744643"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -89,6 +108,111 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="separator:ga5ee403c18197e7dd5a472f5a3def38b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga8230dd7e0453e461cf8efb744373e4c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8230dd7e0453e461cf8efb744373e4c9">&#9670;&nbsp;</a></span>byteCompile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void byteCompile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__types.html#gab8ef12fab634c171394422d0ee8baf94">byte</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>compile byte </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">byte</td><td>to be compiled </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga3755bcd7472a212bb83edf00873e5bcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3755bcd7472a212bb83edf00873e5bcc">&#9670;&nbsp;</a></span>cellCompile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cellCompile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__types.html#ga5f415cf27f127e2644eec9d113d44f08">cell</a>&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>compile cell == VM machine word </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cell</td><td>32- or 16- bit integer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga215113c9a7d256e60db51cf5ca34b759"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga215113c9a7d256e60db51cf5ca34b759">&#9670;&nbsp;</a></span>cellGet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__types.html#ga5f415cf27f127e2644eec9d113d44f08">cell</a> cellGet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__types.html#ga5f415cf27f127e2644eec9d113d44f08">cell</a>&#160;</td>
+          <td class="paramname"><em>addr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>get cell from memory </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>address in VM memory </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gaff85c00da2222f402e18d2ee8070ee43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff85c00da2222f402e18d2ee8070ee43">&#9670;&nbsp;</a></span>labelCompile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void labelCompile </td>
+          <td>(</td>
+          <td class="paramtype">string *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>compile label by its name </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>label name to be lookup in symbol table </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group__compiler_gaff85c00da2222f402e18d2ee8070ee43_cgraph.png" border="0" usemap="#group__compiler_gaff85c00da2222f402e18d2ee8070ee43_cgraph" alt=""/></div>
+<map name="group__compiler_gaff85c00da2222f402e18d2ee8070ee43_cgraph" id="group__compiler_gaff85c00da2222f402e18d2ee8070ee43_cgraph">
+<area shape="rect" id="node2" href="group__compiler.html#ga3755bcd7472a212bb83edf00873e5bcc" title="cellCompile" alt="" coords="151,5,241,32"/>
+</map>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

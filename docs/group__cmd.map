@@ -1,4 +1,4 @@
 <map id="commands" name="commands">
-<area shape="rect" id="node1" href="$group__op.html" title="Opcodes" alt="" coords="300,5,375,32"/>
+<area shape="rect" id="node1" href="$group__op.html" title="opcodes" alt="" coords="300,5,371,32"/>
 <area shape="rect" id="node3" href="$group__vm.html" title="Virtual Machine" alt="" coords="5,5,117,32"/>
 </map>
