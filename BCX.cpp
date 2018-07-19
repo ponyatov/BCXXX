@@ -114,14 +114,14 @@ void cellCompile(cell C) {
 
 												// ============= SYMBOL TABLE:
 map<string,addr>		known;					// known labels
-map<string,addrvector>	undef;					// forward reference table
+map<string,addrvector*>	undef;					// forward reference table
 
 void label(string *name) {
 	known[*name] = Cp;							// register in known symtable
 	auto record	= undef.find(*name);			// search undefined by name
 	if (record != undef.end()) {				// if exists in undef
-		auto first = record->second.begin();
-		auto end   = record->second.end();
+		auto first = record->second->begin();
+		auto end   = record->second->end();
 		for (auto it = first; it != end; it++)	// iterate over undef[name]
 			cout << *it << "\t";
 //			cellSet(*it,Cp);					// patch all saved addresses
@@ -134,11 +134,16 @@ void labelCompile(string* name) {
 	if (known.find(*name) != known.end())	// if exists in known
 		cellCompile(known[*name]);
 	else {
-		auto record = undef.find(*name);	// find undef by name
-		if (record != undef.end())			// if already has record
-			record->second.push_back(Cp);
-		else
-			undef[*name] = addrvector(Cp);	// register new undef list
+		auto record = undef[*name];			// find undef by name
+		if (record) {						// has existing record
+
+		} else {
+		}
+//		if (record != undef.end()) {		// if already has record
+//			cout << "Cp " << Cp << endl;
+//			record->second->push_back(Cp);
+//		} else
+//			undef[*name] = new addrvector(Cp);	// register new undef list
 		cellCompile(-1);					// compile stub to command
 	}
 }

@@ -119,7 +119,7 @@ typedef std::vector<addr> addrvector;
 /// known assembly labels
 extern map<string,addr> known;
 /// forward references to unknown labels
-extern map<string,addrvector> undef;
+extern map<string,addrvector*> undef;
 
 /// @}
 
