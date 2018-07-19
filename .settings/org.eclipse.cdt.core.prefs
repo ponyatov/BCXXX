@@ -1,0 +1,6 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560/TRACE/delimiter=\:
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560/TRACE/operation=append
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560/TRACE/value=-DTRACE
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560/append=true
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560/appendContributed=true
