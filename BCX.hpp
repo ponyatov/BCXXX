@@ -157,10 +157,10 @@ extern char* yytext;
 /// @{
 
 /// `CMD0` zero parameters command
-#define C0(X) { yylval.cmd0 = X; return CMD0; }
+#define C0(X) { yylval.opcode = X; return CMD0; }
 
 /// `CMD1` single parameter command
-#define C1(X) { yylval.cmd1 = X; return CMD1; }
+#define C1(X) { yylval.opcode = X; return CMD1; }
 
 /// @}
 

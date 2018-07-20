@@ -2,14 +2,13 @@
 #include "BCX.hpp"
 %}
 
-%defines %union {
-	byte cmd0, cmd1;
-	string *str;
-	}
+%defines %union {	// === yylval structure definition ===
+	byte opcode;	// opcodes for VM commands
+	string *str;	// string value for label, variable names etc 
+}
 
-%token <cmd0> CMD0
-%token <cmd1> CMD1
-%token dirGO
+%token <opcode> CMD0 CMD1		/* commands */
+%token dirGO					/* directives */
 %token <str> ID
 %token COLON
 
