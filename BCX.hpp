@@ -15,14 +15,14 @@ using namespace std;
 /// @defgroup types types
 /// @{
 
-/// address in virtual memory
-typedef uint32_t addr;
-
 /// byte
 typedef uint8_t byte;
 
 /// 32/16-bit VM machine word
-typedef addr cell;
+typedef uint32_t cell;
+
+/// address in virtual memory
+typedef cell addr;
 
 /// @}
 
@@ -63,6 +63,9 @@ extern void CALL(void);
 /// `RET` : return from nested call
 extern void RET(void);
 
+/// `LIT ( -- cell )` : push constant on stack
+extern void LIT(void);
+
 /// `DUMP` : dump memory
 extern void DUMP(void);
 
@@ -77,10 +80,14 @@ extern void DUMP(void);
 
 /// @ref JMP
 #define OP_JMP		0x01
+/// @ref qJMP
 #define OP_qJMP		0x02
+/// @ref CALL
 #define OP_CALL		0x03
+/// @ref RET
 #define OP_RET		0x04
 
+/// @ref LIT
 #define OP_LIT		0x05
 
 /// @}
@@ -96,20 +103,25 @@ extern void DUMP(void);
 extern uint32_t Cp;
 
 /// get cell from memory
-/// @param[in] addr address in VM memory
-extern cell cellGet(cell addr);
+/// @param[in] A address in VM memory
+extern cell cellGet(addr A);
+
+/// set cell in memory
+/// @param[in] A address in VM memory
+/// @param[in] C cell to be set
+extern void cellSet(addr A, cell C);
 
 /// compile byte
-/// @param[in] byte to be compiled
-extern void byteCompile(byte);
+/// @param[in] B to be compiled
+extern void byteCompile(byte B);
 
 /// compile cell == VM machine word
-/// @param[in] cell 32- or 16- bit integer
-extern void cellCompile(cell);
+/// @param[in] C 32-/16- bit integer
+extern void cellCompile(cell C);
 
 /// compile label by its name
-/// @param[in] string label name to be lookup in symbol table
-extern void labelCompile(string*);
+/// @param[in] L label name to be lookup in symbol table
+extern void labelCompile(string* L);
 
 /// @defgroup symtable symbol table
 /// @{

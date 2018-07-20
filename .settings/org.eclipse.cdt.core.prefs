@@ -1,6 +1,13 @@
 eclipse.preferences.version=1
-environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560/TRACE/delimiter=\:
-environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560/TRACE/operation=append
-environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560/TRACE/value=-DTRACE
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560.1389880374/TRACE/delimiter=\:
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560.1389880374/TRACE/operation=append
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560.1389880374/TRACE/value=-DTRACE
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560.1389880374/append=true
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560.1389880374/appendContributed=true
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560.2032144553/TRACE/delimiter=\:
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560.2032144553/TRACE/operation=append
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560.2032144553/TRACE/value=-DTRACE
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560.2032144553/append=true
+environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560.2032144553/appendContributed=true
 environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560/append=true
 environment/project/cdt.managedbuild.toolchain.gnu.cross.base.45557560/appendContributed=true

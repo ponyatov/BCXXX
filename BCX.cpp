@@ -77,7 +77,8 @@ void JMP(void) {
 void DUMP(void) {
 	printf("\n");
 	for (int i=0;i<Cp;i++) {
-		if (i % 0x10 == 0) printf("%.8X:\t",i);
+		if (i % 0x10 == 0) printf("\n%.8X: ",i);
+		else if (i % 0x08 == 0) printf(" ");
 		printf("%.2X ",M[i]);
 	}
 	printf("\n\nKNOWN\n");
@@ -93,12 +94,20 @@ void byteCompile(byte B) {
 	M[Cp++] = B;
 }
 
-cell cellGet(cell addr) {
+cell cellGet(cell C) {
 	#if defined(__i386__) | defined(__amd64__)
-	return *((cell*)&M[addr]);
+	return *((cell*)&M[C]);
 	#else
 	#error CPU
-	//	return (M[addr+0]<< 0|M[addr+1]<< 8|M[addr+2]<<16|M[addr+3]<<24);
+	//	return (M[C+0]<< 0|M[C+1]<< 8|M[C+2]<<16|M[C+3]<<24);
+	#endif
+}
+
+void cellSet(addr A, cell C) {
+	#if defined(__i386__) | defined(__amd64__)
+		*((cell*)&M[A]) = C;
+	#else
+	#error CPU
 	#endif
 }
 
@@ -123,8 +132,7 @@ void label(string *name) {
 		auto first = record->second->begin();
 		auto end   = record->second->end();
 		for (auto it = first; it != end; it++)	// iterate over undef[name]
-			cout << *it << "\t";
-//			cellSet(*it,Cp);					// patch all saved addresses
+			cellSet(*it,Cp);					// patch all saved addresses
 		undef.erase(record);					// remove the whole record
 		cout << endl;
 	}
@@ -134,16 +142,15 @@ void labelCompile(string* name) {
 	if (known.find(*name) != known.end())	// if exists in known
 		cellCompile(known[*name]);
 	else {
-		auto record = undef[*name];			// find undef by name
-		if (record) {						// has existing record
-
+		auto record = undef.find(*name);	// find undef by name
+		auto end    = undef.end();
+		if (record != end) {				// has existing record
+			cout << ">" << Cp << endl;
+			record->second->push_back(Cp);	// append current compiler pointer
 		} else {
+			undef[*name] = new addrvector();// create new vector with Cp
+			undef[*name]->push_back(Cp);
 		}
-//		if (record != undef.end()) {		// if already has record
-//			cout << "Cp " << Cp << endl;
-//			record->second->push_back(Cp);
-//		} else
-//			undef[*name] = new addrvector(Cp);	// register new undef list
 		cellCompile(-1);					// compile stub to command
 	}
 }
