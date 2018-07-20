@@ -7,10 +7,10 @@
 	string *str;	// string value for label, variable names etc 
 }
 
-%token <opcode> CMD0 CMD1		/* commands */
-%token dirGO					/* directives */
-%token <str> ID
-%token COLON
+%token <opcode> CMD0 CMD1		/* commands		*/
+%token dirGO					/* directives	*/
+%token <str> ID					/* label id		*/
+%token COLON					/* :			*/
 
 %%
 REPL :

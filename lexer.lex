@@ -18,6 +18,9 @@ nop					C0(OP_NOP)
 halt				C0(OP_HALT)
 
 jmp					C1(OP_JMP)
+\?jmp				C1(OP_qJMP)
+call				C1(OP_CALL)
+ret					C0(OP_RET)
 
 \:					{ return COLON; }
 {az}{azn}*			{ yylval.str = new string(yytext); return ID; }

@@ -18,6 +18,9 @@ using namespace std;
 /// byte
 typedef uint8_t byte;
 
+/// narrow 16-bit integer
+typedef uint16_t narrow;
+
 /// 32/16-bit VM machine word
 typedef uint32_t cell;
 
@@ -100,7 +103,7 @@ extern void DUMP(void);
 /// @{
 
 /// compiler pointer
-extern uint32_t Cp;
+extern addr Cp;
 
 /// get cell from memory
 /// @param[in] A address in VM memory

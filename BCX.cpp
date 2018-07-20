@@ -90,16 +90,11 @@ void DUMP(void) {
 	fflush(stdout);
 }
 
-void byteCompile(byte B) {
-	M[Cp++] = B;
-}
-
-cell cellGet(cell C) {
+cell cellGet(addr C) {
 	#if defined(__i386__) | defined(__amd64__)
-	return *((cell*)&M[C]);
+		return *((cell*)&M[C]);
 	#else
-	#error CPU
-	//	return (M[C+0]<< 0|M[C+1]<< 8|M[C+2]<<16|M[C+3]<<24);
+		#error CPU
 	#endif
 }
 
@@ -107,17 +102,17 @@ void cellSet(addr A, cell C) {
 	#if defined(__i386__) | defined(__amd64__)
 		*((cell*)&M[A]) = C;
 	#else
-	#error CPU
+		#error CPU
 	#endif
 }
 
+void byteCompile(byte B) { M[Cp++] = B; }
+
 void cellCompile(cell C) {
 	#if defined(__i386__) | defined(__amd64__)
-	*((cell*)&M[Cp]) = C; Cp += sizeof(cell);
+		*((cell*)&M[Cp]) = C; Cp += sizeof(cell);
 	#else
-	#error CPU
-	//	byteCompile(C>> 0); byteCompile(C>> 8);
-	//	byteCompile(C>>16); byteCompile(C>>24);
+		#error CPU
 	#endif
 }
 

@@ -129,11 +129,11 @@ Macros</h2></td></tr>
 <tr class="separator:ga9d3b8bc896b4c146377f5c0c14b348ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">token macro</div></td></tr>
 <tr class="memitem:ga3388149d46494096258bcd52cb3e3648"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__parser.html#ga3388149d46494096258bcd52cb3e3648">C0</a>(X)&#160;&#160;&#160;{ yylval.cmd0 = X; return CMD0; }</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__parser.html#ga3388149d46494096258bcd52cb3e3648">C0</a>(X)&#160;&#160;&#160;{ yylval.opcode = X; return CMD0; }</td></tr>
 <tr class="memdesc:ga3388149d46494096258bcd52cb3e3648"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>CMD0</code> zero parameters command <br /></td></tr>
 <tr class="separator:ga3388149d46494096258bcd52cb3e3648"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5edefb341af3cf6daaf77becf6772b3d"><td class="memItemLeft" align="right" valign="top">
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__parser.html#ga5edefb341af3cf6daaf77becf6772b3d">C1</a>(X)&#160;&#160;&#160;{ yylval.cmd1 = X; return CMD1; }</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__parser.html#ga5edefb341af3cf6daaf77becf6772b3d">C1</a>(X)&#160;&#160;&#160;{ yylval.opcode = X; return CMD1; }</td></tr>
 <tr class="memdesc:ga5edefb341af3cf6daaf77becf6772b3d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><code>CMD1</code> single parameter command <br /></td></tr>
 <tr class="separator:ga5edefb341af3cf6daaf77becf6772b3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -143,6 +143,10 @@ Typedefs</h2></td></tr>
 typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__types.html#gab8ef12fab634c171394422d0ee8baf94">byte</a></td></tr>
 <tr class="memdesc:gab8ef12fab634c171394422d0ee8baf94"><td class="mdescLeft">&#160;</td><td class="mdescRight">byte <br /></td></tr>
 <tr class="separator:gab8ef12fab634c171394422d0ee8baf94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2721df4e8b2478c4ef1d92aaf2b4c6b"><td class="memItemLeft" align="right" valign="top">
+typedef uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__types.html#gae2721df4e8b2478c4ef1d92aaf2b4c6b">narrow</a></td></tr>
+<tr class="memdesc:gae2721df4e8b2478c4ef1d92aaf2b4c6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">narrow 16-bit integer <br /></td></tr>
+<tr class="separator:gae2721df4e8b2478c4ef1d92aaf2b4c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa4ce5becfe87bd75bfa66d39199e0932"><td class="memItemLeft" align="right" valign="top">
 typedef uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__types.html#gaa4ce5becfe87bd75bfa66d39199e0932">cell</a></td></tr>
 <tr class="memdesc:gaa4ce5becfe87bd75bfa66d39199e0932"><td class="mdescLeft">&#160;</td><td class="mdescRight">32/16-bit VM machine word <br /></td></tr>
@@ -231,10 +235,10 @@ Variables</h2></td></tr>
 <a class="el" href="group__types.html#gab8ef12fab634c171394422d0ee8baf94">byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__vm.html#ga4007f9a1758165b559d43d5e581df344">op</a></td></tr>
 <tr class="memdesc:ga4007f9a1758165b559d43d5e581df344"><td class="mdescLeft">&#160;</td><td class="mdescRight">opcode of current command <br /></td></tr>
 <tr class="separator:ga4007f9a1758165b559d43d5e581df344"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5ee403c18197e7dd5a472f5a3def38b0"><td class="memItemLeft" align="right" valign="top">
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compiler.html#ga5ee403c18197e7dd5a472f5a3def38b0">Cp</a></td></tr>
-<tr class="memdesc:ga5ee403c18197e7dd5a472f5a3def38b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">compiler pointer <br /></td></tr>
-<tr class="separator:ga5ee403c18197e7dd5a472f5a3def38b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab4e0cb834c79bb4e20314b46f320ae74"><td class="memItemLeft" align="right" valign="top">
+<a class="el" href="group__types.html#ga4c8068c05b1ea23a629c0ccfddbf45f7">addr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__compiler.html#gab4e0cb834c79bb4e20314b46f320ae74">Cp</a></td></tr>
+<tr class="memdesc:gab4e0cb834c79bb4e20314b46f320ae74"><td class="mdescLeft">&#160;</td><td class="mdescRight">compiler pointer <br /></td></tr>
+<tr class="separator:gab4e0cb834c79bb4e20314b46f320ae74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa94e69a428386f46c7efe978b79cd187"><td class="memItemLeft" align="right" valign="top">
 map&lt; string, <a class="el" href="group__types.html#ga4c8068c05b1ea23a629c0ccfddbf45f7">addr</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__symtable.html#gaa94e69a428386f46c7efe978b79cd187">known</a></td></tr>
 <tr class="memdesc:gaa94e69a428386f46c7efe978b79cd187"><td class="mdescLeft">&#160;</td><td class="mdescRight">known assembly labels <br /></td></tr>
