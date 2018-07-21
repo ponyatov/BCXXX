@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bcx',['BCX',['../index.html',1,'']]]
+  ['project_20file_20structure',['Project file structure',['../skelex.html',1,'']]]
 ];
